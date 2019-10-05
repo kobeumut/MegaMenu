@@ -15,6 +15,8 @@ text-teal-800 shadow-md">
             class="text-sm pr-2 pl-2 shadow-sm font-semibold">HIZLI MENU</a></li>
         <li class="table-cell pl-5 pr-5 border-solid border-r border-gray-400 "><a href=""
             class="text-sm pr-2 pl-2 shadow-sm font-semibold">HIZLI MENU</a></li>
+        <li class="table-cell pl-5 pr-5 border-solid border-r border-gray-400">
+            <Dropdownmenu /></li>
       </ul>
     <div class="block lg:hidden">
       <button class="flex items-center px-3 py-2 border rounded text-teal-900 border-teal-900 hover:text-white hover:border-white">
@@ -28,10 +30,15 @@ text-teal-800 shadow-md">
 </template>
 
 <script>
+import Dropdownmenu from '@/components/Dropdown.vue'
 export default {
   name: 'HelloWorld',
+  components : {
+    Dropdownmenu
+  },
   props: {
     msg: String
   }
 }
+</script>
 
