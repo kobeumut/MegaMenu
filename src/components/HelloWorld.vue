@@ -16,18 +16,18 @@ text-teal-800 shadow-md">
         <li class="table-cell pl-5 pr-5 border-solid border-r border-gray-400 "><a href=""
             class="text-sm pr-2 pl-2 shadow-sm font-semibold">HIZLI MENU</a></li>
         <li class="table-cell pl-5 pr-5 border-solid border-r border-gray-400">
-            <Dropdown /></li>
+            <Dropdownmenu /></li>
       </ul>
     </div>
 </body>
 </template>
 
 <script>
-import Dropdown from '@/components/Dropdown.vue'
+import Dropdownmenu from '@/components/Dropdown.vue'
 export default {
   name: 'HelloWorld',
   components : {
-    Dropdown
+    Dropdownmenu
   },
   props: {
     msg: String
