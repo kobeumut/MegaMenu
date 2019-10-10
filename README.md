@@ -1,4 +1,7 @@
-# megamenu
+# Megamenu
+
+## Project Info
+The project will have a large sample structure covering various menu examples using vuejs and tailwindcss. If you want to make additional components, please contribute a pull request to develop branch.
 
 ## Project setup
 ```
