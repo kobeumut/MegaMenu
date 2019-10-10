@@ -9,12 +9,12 @@ text-teal-800 shadow-md">
             class="text-sm pr-2 pl-2 shadow-sm font-semibold">PORTALLAR</a></li>
         <li class="table-cell pl-5 pr-5 border-solid border-r border-gray-400 "><a href=""
             class="text-sm pr-2 pl-2 shadow-sm font-semibold">HIZLI MENU</a></li>
-        <li class="table-cell pl-5 pr-5 border-solid border-r border-gray-400 "><a href=""
-            class="text-sm pr-2 pl-2 shadow-sm font-semibold">HIZLI MENU</a></li>
-        <li class="table-cell pl-5 pr-5 border-solid border-r border-gray-400 "><a href=""
-            class="text-sm pr-2 pl-2 shadow-sm font-semibold">HIZLI MENU</a></li>
-        <li class="table-cell pl-5 pr-5 border-solid border-r border-gray-400 "><a href=""
-            class="text-sm pr-2 pl-2 shadow-sm font-semibold">HIZLI MENU</a></li>
+        <li class="table-cell pl-5 pr-5 border-solid border-r border-gray-400 "><button
+            class="text-sm pr-2 pl-2 shadow-sm font-semibold" @click="selectTab(1)">TAB 1</button></li>
+        <li class="table-cell pl-5 pr-5 border-solid border-r border-gray-400 "><button
+            class="text-sm pr-2 pl-2 shadow-sm font-semibold" @click="selectTab(2)">TAB 2</button></li>
+        <li class="table-cell pl-5 pr-5 border-solid border-r border-gray-400 "><button
+            class="text-sm pr-2 pl-2 shadow-sm font-semibold" @click="selectTab(3)">TAB 3</button></li>
         <li class="table-cell pl-5 pr-5 border-solid border-r border-gray-400">
             <Dropdownmenu /></li>
       </ul>
@@ -25,20 +25,37 @@ text-teal-800 shadow-md">
     </div>
 
   </div>
+  <tabs :selectedTab = tabNo />
 </div>
 
 </template>
 
 <script>
 import Dropdownmenu from '@/components/Dropdown.vue'
+import Tabs from '@/components/Tabs.vue'
 export default {
   name: 'HelloWorld',
+  data() {
+    return{
+      tabNo: ""
+    }
+  },
   components : {
-    Dropdownmenu
+    Dropdownmenu,
+    Tabs
   },
   props: {
     msg: String
+  },
+  methods: {
+    selectTab(newTabNo){
+      if(newTabNo == this.tabNo){
+        this.tabNo = "";
+      }else{
+        this.tabNo = newTabNo;
+      }
+      }
+    }
   }
-}
 </script>
 
